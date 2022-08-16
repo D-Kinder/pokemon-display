@@ -51,11 +51,25 @@ html {
   grid-area: previouspokemon;
   border: 2px solid black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .previous-pokemon img {
+  height: 50px;
+}
+
+.next-pokemon {
+  grid-area: nextpokemon;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.next-pokemon img {
   height: 50px;
 }
 
@@ -73,10 +87,11 @@ html {
 
 .image {
   grid-area: image;
-  border: 2px solid black;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  height: 250px;
+  margin-top:40px;
 }
 
 .name {
@@ -102,14 +117,9 @@ html {
   border: 2px solid black;
 }
 
-.next-pokemon {
-  grid-area: nextpokemon;
-  border: 2px solid black;
-  display: flex;
+.type {
+  display:flex;
   justify-content: center;
   align-items: center;
 }
 
-.next-pokemon img {
-  height: 50px;
-}

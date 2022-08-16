@@ -9,9 +9,7 @@ const Pokemondisplay =() => {
     const [pokedexNumber, setPokedexNumber] = useState(1)
 
 useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=1200").then((pokemon) => {
-        return pokemon.json()
-    }).then(({results}) => {
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=1200").then((pokemon) => pokemon.json()).then(({results}) => {
         const pokemonArray = []
         for (const pokemon of results){
             pokemonArray.push(pokemon)
@@ -21,7 +19,7 @@ useEffect(() => {
 }, [])
     return (
         <div className="pokemon-display">
-            <Previouspokemon pokedexNumber={pokedexNumber} setPokedexNumber={setPokedexNumber}/>
+            <Previouspokemon pokedexNumber={pokedexNumber} setPokedexNumber={setPokedexNumber} pokemon={pokemon}/>
             <Pokemon pokedexNumber={pokedexNumber} pokemon={pokemon}/>
             <Nextpokemon pokedexNumber={pokedexNumber} setPokedexNumber={setPokedexNumber} pokemon={pokemon}/>
         </div>
