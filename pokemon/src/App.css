@@ -1,0 +1,98 @@
+html {
+  background-image: url("./images/pokemon.jpeg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.pokedex {
+  display: inline-grid;
+  margin-left: 150px;
+  margin-right: 0px;
+  margin-top: 40px;
+  width: 85%;
+  height: 750px;
+  grid-template-columns: 6fr 1fr 8fr;
+  grid-template-areas:
+  "welcome . pokemon-display";
+}
+
+.greeting {
+  grid-area: welcome;
+  display: inline-grid;
+  grid-template-rows: 5.5fr 3fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  "message blank";
+}
+
+.message {
+  grid-area: message;
+  border: 5px solid black;
+}
+
+
+
+.pokemon-display {
+  grid-area: pokemon-display;
+  border: 5px solid black;
+  border-radius: 5%;
+  padding: 5px;
+  display: inline-grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1.5fr 6fr;;
+  grid-template-areas:
+  ". . ."
+  "previouspokemon pokemon nextpokemon";
+  margin-right: 80px;
+  height: 800px
+}
+
+.previous-pokemon {
+  grid-area: previouspokemon;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previous-pokemon img {
+  height: 50px;
+}
+
+.pokemon {
+  grid-area: pokemon;
+  border: black 2px solid;
+  display: inline-grid;
+  grid-template-rows: 4fr 2fr 1fr;
+  grid-template-areas:
+  "image"
+  "name"
+  "count";
+}
+
+.image {
+  grid-area: image;
+  border: 2px solid black;
+}
+
+.name {
+  grid-area: name;
+  border: 2px solid black;
+}
+
+.count {
+  grid-area:count;
+  border: 2px solid black;
+}
+
+.next-pokemon {
+  grid-area: nextpokemon;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-pokemon img {
+  height: 50px;
+}
