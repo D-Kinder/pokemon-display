@@ -6,7 +6,7 @@ import {useState, useEffect} from 'react'
 
 const Pokemondisplay =() => {
     const [pokemon, setPokemon] = useState([])
-    const [pokedexNumber, setPokedexNumber] = useState(0)
+    const [pokedexNumber, setPokedexNumber] = useState(1)
 
 useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1200").then((pokemon) => {
