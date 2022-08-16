@@ -63,25 +63,42 @@ html {
   grid-area: pokemon;
   border: black 2px solid;
   display: inline-grid;
-  grid-template-rows: 4fr 2fr 1fr;
+  grid-template-rows: 5fr 2fr 1.5fr 1fr;
   grid-template-areas:
   "image"
   "name"
+  "types"
   "count";
 }
 
 .image {
   grid-area: image;
   border: 2px solid black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name {
   grid-area: name;
   border: 2px solid black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .count {
   grid-area:count;
+  border: 2px solid black;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.types {
+  grid-area: types;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;;
   border: 2px solid black;
 }
 
